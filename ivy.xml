@@ -7,10 +7,11 @@
         <dependency org="org.apache.httpcomponents" name="httpclient" rev="4.2.5"/>
         <dependency org="org.apache.httpcomponents" name="httpcore" rev="4.2.4"/>
         <dependency org="org.jsoup" name="jsoup" rev="1.8.1" />
+        <dependency org="com.google.code.gson" name="gson" rev="2.3.1" />
+        <dependency org="cd.go.plugin" name="gocd-package-material-plugin-shim" rev="16.12.0" />
+
         <dependency org="junit" name="junit" rev="4.11"/>
         <dependency org="org.mockito" name="mockito-all" rev="1.9.5"/>
-        <dependency org="com.thoughtworks" name="go-plugin-api" rev="current">
-           <artifact name="go-plugin-api" url="http://www.thoughtworks.com/products/docs/go/current/help/resources/go-plugin-api-current.jar"/>
-        </dependency>
+        <dependency org="cd.go.plugin" name="go-plugin-api" rev="16.11.0"/>
     </dependencies>
 </ivy-module>

@@ -1,6 +1,5 @@
 <project name="go-maven-poller" default="all" basedir="." xmlns:ivy="antlib:org.apache.ivy.ant">
 
-    <property name="go.plugin.api" value="sdk/go-plugin-api-13.3.0.jar"/>
     <property name="go.plugin.util" value="sdk/go-plugin-util.jar"/>
     <property name="target.dir" value="target"/>
     <property name="dist.dir" value="dist"/>
@@ -10,7 +9,6 @@
         <fileset dir="lib">
             <include name="**/*.jar"/>
         </fileset>
-        <pathelement location="${go.plugin.api}"/>
         <pathelement location="${go.plugin.util}"/>
     </path>
     <target name="resolve">
@@ -70,9 +68,10 @@
                 <exclude name="hamcrest*.jar"/>
                 <exclude name="*-sources.jar"/>
                 <exclude name="*-javadoc.jar"/>
+                <exclude name="go-plugin-api*.jar"/>
                 <include name="*.jar"/>
             </fileset>
-            <file file="sdk/go-plugin-util.jar"/>
+            <file file="${go.plugin.util}"/>
         </copy>
         <basename property="jar.name" file="${basedir}"/>
         <copy file="plugin.xml" todir="${target.dir}/src"/>
